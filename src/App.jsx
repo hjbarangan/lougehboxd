@@ -1,28 +1,64 @@
-import { useState } from "react";
+// import { useState } from "react";
+
+import imageSrc from "./assets/images/default.png";
+import hungerGames from "./assets/images/hunger.jpg"
+import spiderVerse from "./assets/images/spiderverse.jpeg"
+import oppen from "./assets/images/oppen.jpg"
+import barbie from "./assets/images/barbie.jpg"
 
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div></div>
-      <h1>Vite + React</h1>
-      <h1 className="text-3xl font-bold underline text-red-500 text-center">
-        Hello world!
-      </h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        <form id="form">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search"
+            className="search"
+          />
+        </form>
+      </header>
+      <main id="main">
+        {/* <div className="text-heading">
+          <h1>Lorem Ipsum</h1>
+        </div> */}
+        <div className="movie-container">
+          <div className="movie">
+            <img src={hungerGames} alt="images"></img>
+          </div>
+
+          <div className="movie">
+            <img src={spiderVerse} alt="images"></img>
+          </div>
+
+          <div className="movie">
+            <img src={barbie} alt="images"></img>
+          </div>
+
+          <div className="movie">
+            <img src={oppen} alt="images"></img>
+          </div>
+
+          <div className="movie">
+            <img src={imageSrc} alt="images"></img>
+          </div>
+
+          <div className="movie">
+            <img src={imageSrc} alt="images"></img>
+          </div>
+
+          <div className="movie">
+            <img src={imageSrc} alt="images"></img>
+          </div>
+
+          <div className="movie">
+            <img src={imageSrc} alt="images"></img>
+          </div>
+        </div>
+      </main>
     </>
   );
 }
