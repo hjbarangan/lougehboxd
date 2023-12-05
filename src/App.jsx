@@ -1,32 +1,16 @@
-// import { useState } from "react";
 
-import { data } from "./data";
-// import Button from "./components/Button";
-import Skeleton from "./components/Skeleton";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Login } from "./pages/Login";
+
 
 function App() {
   return (
-    <>
-      <main id="main">
-   
-        <Skeleton></Skeleton>
-        <div className="movie-container">
-        {/* <Button>Click me</Button> */}
-          {data.map((item) => {
-            return (
-              <>
-                <div className="movie">
-                  <img src={item.imageSrc} alt="images"></img>
-                </div>
-              </>
-            );
-          })}
-
-
-        </div>
-      </main>
-    </>
+    <BrowserRouter>
+      <Routes>
+        {/* <Route path="/" element={<Skeleton data={data} />} /> */}
+        <Route path="/" element={<Login/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
