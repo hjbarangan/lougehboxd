@@ -1,7 +1,7 @@
 export function Login() {
   return (
     <div className="h-screen w-screen flex">
-      <div className="flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center">
+      <div className="flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-500 i justify-around items-center">
         <div>
           <h1 className="text-white font-bold text-4xl font-sans">MOVIE REVIEWER APP</h1>
           <p className="text-white mt-1">
@@ -67,7 +67,7 @@ export function Login() {
           </div>
           <button
             type="submit"
-            className="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"
+            className="block w-full bg-indigo-500 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"
           >
             Login
           </button>

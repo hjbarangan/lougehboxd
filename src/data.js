@@ -12,21 +12,21 @@ export const data = [
       "imageSrc": barbie
     },
     {
-      "id": 1,
+      "id": 2,
       "title": "Hello World",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nunc eget odio aliquam consectetur. Integer id tortor sed nisl ullamcorper luctus.",
       "release_year": "2020",
       "imageSrc": oppenheimer
     },
     {
-        "id": 1,
+        "id": 3,
         "title": "Hello World",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nunc eget odio aliquam consectetur. Integer id tortor sed nisl ullamcorper luctus.",
         "release_year": "2020",
         "imageSrc": spidey
       },
       {
-        "id": 1,
+        "id": 4,
         "title": "Hello World",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nunc eget odio aliquam consectetur. Integer id tortor sed nisl ullamcorper luctus.",
         "release_year": "2020",
