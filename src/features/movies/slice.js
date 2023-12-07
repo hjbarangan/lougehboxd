@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 import axios from "../../services/axios";
 
+//STATE
 const initialState = {
   data: [],
   isLoading: false,
@@ -10,6 +11,7 @@ const initialState = {
   errorMessage: "",
 };
 
+//ACTIONS?
 export const getMovies = createAsyncThunk("movies/getMovies", async () => {
   const response = await axios.get("/movies");
   return response.data;
@@ -36,5 +38,11 @@ export const moviesSlice = createSlice({
       });
   },
 });
+
+//GETTERS?
+export const selectAllMovies = (state) => state.movies;
+
+export const selectMovieById = (state, moviesId) =>
+  state.movies.find((movie) => movie.id === moviesId);
 
 export default moviesSlice.reducer;

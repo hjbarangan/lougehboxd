@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getMovies } from "../../features/movies/slice";
+import { getMovies, selectAllMovies } from "../../features/movies/slice";
 
 export default function Homepage() {
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.movie);
-
+  const { data } = useSelector(selectAllMovies);
   useEffect(() => {
     dispatch(getMovies());
   }, [dispatch]);
@@ -20,14 +19,16 @@ export default function Homepage() {
                 className="flex flex-col w-2/3  h-full justify-center items-center overflow-hidden m-2"
                 key={item.id}
               >
-                <div className="flex flex-col w-full h-96 justify-center items-center">
+                <div className="flex flex-col w-full h-96 justify-center items-center hover:translate-y-100 transform">
                   <img
                     src={item.imageSrc}
                     alt={item.title}
                     className="object-cover h-full"
                   />
                   <div className="w-full p-3 flex flex-wrap justify-center">
-                    <p className="text-center text-sm font-bold text-white tracking-wide uppercase">{item.title}</p>
+                    <p className="text-center text-sm font-bold text-white tracking-wide uppercase">
+                      {item.title}
+                    </p>
                   </div>
                 </div>
               </div>
