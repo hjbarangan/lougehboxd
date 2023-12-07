@@ -1,25 +1,41 @@
-import { data } from "../../data";
-const Home = () => (
-  <main>
-    <div className='flex w-screen h-screen bg-red-300 justify-center items-center flex-wrap'>
-      <div className='flex m-2 p-4 justify-center items-center object-center w-2/3 h-1/2 bg-black'>
-        {data.map((item) => {
-          return (
-            <div
-              className='flex bg-purple-300 h-full w-1/4 justify-center items-center relative overflow-hidden m-2'
-              key={item.id}
-            >
-              <img
-                src={item.imageSrc}
-                alt=''
-                className='flex object-cover w-full h-full'
-              />
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  </main>
-);
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getMovies, selectAllMovies } from "../../features/movies/slice";
 
-export default Home;
+export default function Homepage() {
+  const dispatch = useDispatch();
+  const { data } = useSelector(selectAllMovies);
+  useEffect(() => {
+    dispatch(getMovies());
+  }, [dispatch]);
+
+  return (
+    <main>
+      <div className="flex w-screen h-screen justify-center items-center flex-wrap">
+        <div className="flex m-2 p-4 justify-center items-center object-center h-1/2 ">
+          {data.map((item) => {
+            return (
+              <div
+                className="flex flex-col w-2/3  h-full justify-center items-center overflow-hidden m-2"
+                key={item.id}
+              >
+                <div className="flex flex-col w-full h-96 justify-center items-center hover:translate-y-100 transform">
+                  <img
+                    src={item.imageSrc}
+                    alt={item.title}
+                    className="object-cover h-full"
+                  />
+                  <div className="w-full p-3 flex flex-wrap justify-center">
+                    <p className="text-center text-sm font-bold text-white tracking-wide uppercase">
+                      {item.title}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </main>
+  );
+}
