@@ -19,13 +19,13 @@ export default function Homepage() {
                 className="flex flex-col w-2/3  h-full justify-center items-center overflow-hidden m-2"
                 key={item.id}
               >
-                <div className="flex flex-col w-full h-96 justify-center items-center hover:translate-y-100 transform">
+                <div className="flex flex-col w-full h-full justify-center items-center hover:translate-y-100 transform">
                   <img
                     src={item.imageSrc}
                     alt={item.title}
-                    className="object-cover h-full"
+                    className="object-cover h-full flex-shrink-0"
                   />
-                  <div className="w-full p-3 flex flex-wrap justify-center">
+                  <div className="w-full p-3 flex flex-wrap justify-center overflow-hidden">
                     <p className="text-center text-sm font-bold text-white tracking-wide uppercase">
                       {item.title}
                     </p>
