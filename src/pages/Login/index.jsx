@@ -1,21 +1,78 @@
+import netflixIcon from '../../assets/images/netflix-icon.jpg';
+import netflixIcon1 from '../../assets/images/netflix-icon1.jpg';
+import netflixIcon2 from '../../assets/images/netflix-icon2.jpg';
+import netflixIcon3 from '../../assets/images/netflix-icon3.jpg';
+import netflixIcon4 from '../../assets/images/netflix-icon4.jpg';
+
 export function Login() {
   return (
     <div className="h-screen w-screen flex">
-      <div className="flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-500 i justify-around items-center">
+      <div className="flex flex-col w-full bg-gradient-to-tr from-blue-900 to-black-500 i justify-center items-center">
         <div>
-          <h1 className="text-white font-bold text-4xl font-sans">MOVIE REVIEWER APP</h1>
-          <p className="text-white mt-1">
-            A Movie Platform
-          </p>
-          <button
-            type="submit"
-            className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2"
-          >
-            Read More
+          <h1 className="text-white font-semibold text-7xl font-sans">
+            Who's Watching?
+          </h1>
+        </div>
+        <div className="grid grid-cols-5 gap-10 mt-16">
+          <div className="text-center">
+            <div className="w-48 h-48">
+              <img
+                className="w-48 hover:border-4 border-white"
+                src={netflixIcon}
+                alt=""
+              />
+            </div>
+            <p className="text-gray-300 text-xl mt-3">herzliyaa</p>
+          </div>
+          <div className="text-center">
+            <div className="w-48 h-48">
+              <img
+                className="w-48 hover:border-4 border-white"
+                src={netflixIcon1}
+                alt=""
+              />
+            </div>
+            <p className="text-gray-300 text-xl mt-3">christinnaa</p>
+          </div>
+          <div className="text-center">
+            <div className="w-48 h-48">
+              <img
+                className="w-48 hover:border-4 border-white"
+                src={netflixIcon2}
+                alt=""
+              />
+            </div>
+            <p className="text-gray-300 text-xl mt-3">mgpancho</p>
+          </div>
+          <div className="text-center">
+            <div className="w-48 h-48">
+              <img
+                className="w-48 hover:border-4 border-white"
+                src={netflixIcon3}
+                alt=""
+              />
+            </div>
+            <p className="text-gray-300 text-xl mt-3">vpascual</p>
+          </div>
+          <div className="text-center">
+            <div className="w-48 h-48">
+              <img
+                className="w-48 hover:border-4 border-white"
+                src={netflixIcon4}
+                alt=""
+              />
+            </div>
+            <p className="text-gray-300 text-xl mt-3">tmgaridos</p>
+          </div>
+        </div>
+
+        <div className="mt-24">
+          <button className="text-2xl border border-gray-400 py-2 px-5 text-gray-400 hover:border hover:border-white hover:text-white">
+            Manage Profiles
           </button>
         </div>
       </div>
-      <div className="flex w-1/2 justify-center items-center bg-white">
+      {/* <div className="flex w-1/2 justify-center items-center bg-white">
         <form className="bg-white">
           <h1 className="text-gray-800 font-bold text-2xl mb-1">
             Hello Again!
@@ -75,7 +132,7 @@ export function Login() {
             Forgot Password ?
           </span>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 }
