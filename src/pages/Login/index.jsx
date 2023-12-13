@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import netflixIcon from '../../assets/images/netflix-icon.jpg';
 import netflixIcon1 from '../../assets/images/netflix-icon1.jpg';
 import netflixIcon2 from '../../assets/images/netflix-icon2.jpg';
@@ -16,20 +17,22 @@ export function Login() {
         <div className="grid grid-cols-5 gap-10 mt-16">
           <div className="text-center">
             <div className="w-48 h-48">
+              <Link to="/">
               <img
-                className="w-48 hover:border-4 border-white"
+                className="rounded-lg hover:border-4 border-white"
                 src={netflixIcon}
-                alt=""
+                alt="blue green icon"
               />
+              </Link>
             </div>
             <p className="text-gray-300 text-xl mt-3">herzliyaa</p>
           </div>
           <div className="text-center">
             <div className="w-48 h-48">
               <img
-                className="w-48 hover:border-4 border-white"
+                className="rounded-lg hover:border-4 border-white"
                 src={netflixIcon1}
-                alt=""
+                alt="green icon"
               />
             </div>
             <p className="text-gray-300 text-xl mt-3">christinnaa</p>
@@ -37,9 +40,9 @@ export function Login() {
           <div className="text-center">
             <div className="w-48 h-48">
               <img
-                className="w-48 hover:border-4 border-white"
+                className="rounded-lg hover:border-4 border-white"
                 src={netflixIcon2}
-                alt=""
+                alt="yellow icon"
               />
             </div>
             <p className="text-gray-300 text-xl mt-3">mgpancho</p>
@@ -47,9 +50,9 @@ export function Login() {
           <div className="text-center">
             <div className="w-48 h-48">
               <img
-                className="w-48 hover:border-4 border-white"
+                className="rounded-lg hover:border-4 border-white"
                 src={netflixIcon3}
-                alt=""
+                alt="red icon"
               />
             </div>
             <p className="text-gray-300 text-xl mt-3">vpascual</p>
@@ -57,9 +60,9 @@ export function Login() {
           <div className="text-center">
             <div className="w-48 h-48">
               <img
-                className="w-48 hover:border-4 border-white"
+                className="rounded-lg hover:border-4 border-white"
                 src={netflixIcon4}
-                alt=""
+                alt="blue icon"
               />
             </div>
             <p className="text-gray-300 text-xl mt-3">tmgaridos</p>
@@ -67,9 +70,11 @@ export function Login() {
         </div>
 
         <div className="mt-24">
-          <button className="text-2xl border border-gray-400 py-2 px-5 text-gray-400 hover:border hover:border-white hover:text-white">
-            Manage Profiles
-          </button>
+          <Link to="/ManageProfiles">
+            <button className="text-2xl border border-gray-400 py-2 px-5 text-gray-400 hover:border hover:border-white hover:text-white">
+              Manage Profiles
+            </button>
+          </Link>
         </div>
       </div>
       {/* <div className="flex w-1/2 justify-center items-center bg-white">
