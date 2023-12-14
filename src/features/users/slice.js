@@ -12,26 +12,26 @@ const initialState = {
 };
 
 //ACTIONS?
-export const getMovies = createAsyncThunk("movies/getMovies", async () => {
-  const response = await axios.get("/movies");
+export const getUsers = createAsyncThunk("users/getUsers", async () => {
+  const response = await axios.get("/users");
   return response.data;
 });
 
-export const moviesSlice = createSlice({
-  name: "movies",
+export const usersSlice = createSlice({
+  name: "users",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getMovies.pending, (state) => {
+      .addCase(getUsers.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getMovies.fulfilled, (state, { payload }) => {
+      .addCase(getUsers.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.isSuccess = true;
         state.data = payload;
       })
-      .addCase(getMovies.rejected, (state, { payload }) => {
+      .addCase(getUsers.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.isError = true;
         state.errorMessage = payload;
@@ -40,9 +40,9 @@ export const moviesSlice = createSlice({
 });
 
 //GETTERS?
-export const selectAllMovies = (state) => state.movies;
+export const selectAllUsers = (state) => state.users;
 
-export const selectMovieById = (state, movieId) =>
-  state.movies.find((movie) => movie.id === movieId);
+export const selectUserById = (state, userId) =>
+  state.users.find((users) => users.id === userId);
 
-export default moviesSlice.reducer;
+export default usersSlice.reducer;
