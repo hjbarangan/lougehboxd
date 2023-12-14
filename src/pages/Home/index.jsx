@@ -1,15 +1,15 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getMovies, selectAllMovies } from '../../features/movies/slice';
-import { Link } from 'react-router-dom';
-import { BiSearch, BiBell } from 'react-icons/bi';
+// import { useDispatch, useSelector } from "react-redux";
+// import { useEffect } from "react";
+// import { getMovies, selectAllMovies } from "../../features/movies/slice";
+import { Link } from "react-router-dom";
+import { BiSearch, BiBell } from "react-icons/bi";
 
 export default function Homepage() {
-  const dispatch = useDispatch();
-  const { data } = useSelector(selectAllMovies);
-  useEffect(() => {
-    dispatch(getMovies());
-  }, [dispatch]);
+  // const dispatch = useDispatch();
+  // const { data } = useSelector(selectAllMovies);
+  // useEffect(() => {
+  //   dispatch(getMovies());
+  // }, [dispatch]);
 
   return (
     <div className="h-screen w-screen bg-gradient-to-tr from-blue-900 to-black-500">
@@ -66,9 +66,8 @@ export default function Homepage() {
               height="225"
               src="https://www.youtube.com/embed/pBk4NYhWNMM?si=cuZQPT1g-cqMeCbW-&amp;controls=0"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div>
@@ -77,9 +76,8 @@ export default function Homepage() {
               height="225"
               src="https://www.youtube.com/embed/uYPbbksJxIg?si=4hT_ic8tPYPy-Qz-&amp;controls=0"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div>
@@ -88,9 +86,8 @@ export default function Homepage() {
               height="225"
               src="https://www.youtube.com/embed/otNh9bTjXWg?si=HN7QafUGTBEjgE3e-&amp;controls=0"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div>
@@ -99,9 +96,8 @@ export default function Homepage() {
               height="225"
               src="https://www.youtube.com/embed/VWavstJydZU?si=CfZG_t2K3R3Gvyy6-&amp;controls=0"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
